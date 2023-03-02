@@ -1,9 +1,14 @@
-import { Injectable } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import { Observable } from "rxjs";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class CrudService {
+  constructor(private http: HttpClient) {}
 
-  constructor() { }
+  public getFotos(): Observable<any> {
+    return this.http.get(`https://jsonplaceholder.typicode.com/photos`);
+  }
 }
