@@ -1,0 +1,16 @@
+<h1> Data Binding </h1>
+
+<!-- Input -->
+<input type="text" (input)="this.numeroInput = $event.target.value">
+    <h2>Input {{ numeroInput }}</h2>
+
+<!-- Input chamando função -->
+<input type="text" (input)="obterNumero($event.target.value)">
+    <h2>Input com função {{ numeroInputMetodo }} </h2>
+
+<!-- Change -->
+<input type="text" (change)="this.numeroChange = $event.target.value">
+    <h2>Change {{ numeroChange }}</h2>
+<!-- Blur -->
+<input type="text" (blur)="this.numeroBlur = $event.target.value">
+    <h2>Blur {{ numeroBlur }}</h2>
