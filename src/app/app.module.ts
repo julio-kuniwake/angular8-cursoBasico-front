@@ -11,6 +11,8 @@ import { PaiComponent } from './components/pai/pai.component';
 import { FilhoComponent } from './components/pai/filho/filho.component';
 import { Rota1Component } from './components/rota1/rota1.component';
 import { Rota2Component } from './components/rota2/rota2.component';
+import { FormComponent } from './components/form/form.component';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -22,8 +24,9 @@ import { Rota2Component } from './components/rota2/rota2.component';
     FilhoComponent,
     Rota1Component,
     Rota2Component,
+    FormComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
